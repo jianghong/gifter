@@ -14,6 +14,16 @@ In terminal:
 
 	node app.js
 
+## Services
+
+200 Latest tweets of a user:
+	
+	/u/{user}/tweets
+
+Top word usage from those tweets:
+	
+	/u/{user}/top
+
 ## Dependencies:
 
 * express 
