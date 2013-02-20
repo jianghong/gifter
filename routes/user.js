@@ -12,7 +12,7 @@ var twitter = require('ntwitter'),
 
 // array of words not to include
 var doNotWant = ['http', 'co', 'RT', 'I', 'i', 'the', 'The', 'lol', 'LOL', 'omg', 'so',
-								'amp'];
+				'amp'];
 
 var sortWordCount = function(wc, limit) {
 	var sorted = [];
@@ -61,7 +61,7 @@ var getTweets = function(req, res, cb) {
 		count: 200
 	}, function(err, data) {
 			if (err) {
-				res.send(404, "username not found");
+				res.send(404, "username not found or is private");
 				return;
 			}
 			cb(req, res, data);

@@ -28,6 +28,10 @@ Suggested gift: (unimplemented)
 
 	/gift/{user}
 	
+## Try it out:
+
+	http://giftter.herokuapp.com/
+
 ## How to run:
 
 In terminal:
