@@ -18,11 +18,11 @@ With a list of 'useful' top words, the app will try to predict a suitable gift f
 
 200 Latest tweets of a user:
 	
-	/u/{user}/tweets
+	/tweets/{user}
 
 Top word usage from those tweets:
 	
-	/u/{user}/top
+	/top/{user}
 
 ## How to run:
 
@@ -37,3 +37,4 @@ In terminal:
 * passport
 * jade
 * wordpos
+* natural
