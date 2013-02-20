@@ -24,6 +24,10 @@ Top word usage from those tweets:
 	
 	/top/{user}
 
+Suggested gift: (unimplemented)
+
+	/gift/{user}
+	
 ## How to run:
 
 In terminal:
