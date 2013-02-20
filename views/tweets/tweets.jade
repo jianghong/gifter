@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+	ul
+		li
+			a(href='/tweets/#{user}') Tweets
+		li
+			a(href='/top/#{user}') Top
+			
+	h1 #{user}'s tweets
+	ul
+		each tweet in result
+			li= tweet.text

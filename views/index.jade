@@ -1,6 +1,10 @@
 extends layout
 
 block content
-	h1= title
 	p Welcome to 
 		a(href='https://github.com/jianghong/gifter') #{title}
+	div#userform
+		form(method='get', action='/top')
+			label Who needs a gift?
+			input(type='text', placeholder='Twitter username', name='username')
+			input(type='submit', value='Submit')

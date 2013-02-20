@@ -51,7 +51,7 @@ var parseMostUsed = function(req, res, data) {
 			}
 		}
 		top = sortWordCount(wordCount);
-		res.render('top', {user: req.params.user, frequent: top});
+		res.render('tweets/top', {user: req.params.user, frequent: top});
 	});
 };
 
@@ -62,6 +62,7 @@ var getTweets = function(req, res, cb) {
 	}, function(err, data) {
 			if (err) {
 				res.send(404, "username not found");
+				return;
 			}
 			cb(req, res, data);
 	});
@@ -69,7 +70,7 @@ var getTweets = function(req, res, cb) {
 
 var tweets = function(req, res) {
 getTweets(req, res, function(req, res, data) {
-		res.render('tweets', { user: req.params.user, result: data});
+		res.render('tweets/tweets', { user: req.params.user, result: data});
 	});
 };
 
@@ -77,5 +78,10 @@ var frequentWords = function (req, res) {
 	getTweets(req, res, parseMostUsed);
 };
 
+var topReroute = function(req, res) {
+	res.redirect('/top/' + req.query.username);
+};
+
 exports.tweets = tweets;
+exports.toproute = topReroute;
 exports.frequent = frequentWords;

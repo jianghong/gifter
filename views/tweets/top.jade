@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+	ul
+		li
+			a(href='/tweets/#{user}') Tweets
+		li
+			a(href='/top/#{user}') Top
+			
+	h1 #{user}'s top word usage from 200 tweets
+	ol
+		each word in frequent
+			li= word
