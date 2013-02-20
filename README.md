@@ -8,11 +8,11 @@ giftter is a web app that uses the Twitter API to get a user's tweets and try to
 
 Disclaimer: They might not actually like the gift.
 
-## How to run:
+## How does it work
 
-In terminal:
+I'm using the wordpos node module to get any words that aren't 'useful'. Adjectives, verbs, adverbs, prepositions are deemed to be not 'useful'. 
 
-	node app.js
+With a list of 'useful' top words, the app will try to predict a suitable gift from those words.
 
 ## Services
 
@@ -23,6 +23,12 @@ In terminal:
 Top word usage from those tweets:
 	
 	/u/{user}/top
+
+## How to run:
+
+In terminal:
+
+	node app.js
 
 ## Dependencies:
 

@@ -11,7 +11,8 @@ var twitter = require('ntwitter'),
 		tokenizer = new natural.WordTokenizer();
 
 // array of words not to include
-var doNotWant = ['http', 'co', 'RT', 'I', 'i', 'the', 'The', 'lol', 'LOL', 'omg', 'so'];
+var doNotWant = ['http', 'co', 'RT', 'I', 'i', 'the', 'The', 'lol', 'LOL', 'omg', 'so',
+								'amp'];
 
 var sortWordCount = function(wc, limit) {
 	var sorted = [];
