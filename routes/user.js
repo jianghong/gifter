@@ -12,7 +12,7 @@ var twitter = require('ntwitter'),
 
 // array of words not to include
 var doNotWant = ['http', 'co', 'RT', 'I', 'i', 'the', 'The', 'lol', 'LOL', 'omg', 'so',
-				'amp'];
+				'amp', 'https'];
 
 var sortWordCount = function(wc, limit) {
 	var sorted = [];
