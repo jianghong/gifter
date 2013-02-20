@@ -37,7 +37,7 @@ var parseMostUsed = function(req, res, data) {
 		for (var i=0; i<data.length; i++) {
 			strArray = tokenizer.tokenize(data[i].text);
 			for (var j=0; j<strArray.length; j++){
-				word = strArray[j];
+				word = strArray[j].toLowerCase();
 				if ((doNotWant.indexOf(word) < 0) && ((result.nouns.indexOf(word) > 0) ||
 					(result.rest.indexOf(word) > 0)))
 				{
