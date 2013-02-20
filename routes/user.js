@@ -82,6 +82,11 @@ var topReroute = function(req, res) {
 	res.redirect('/top/' + req.query.username);
 };
 
+var findGift = function (req, res) {
+	res.render('tweets/gift', { user: req.params.user });
+};
+
 exports.tweets = tweets;
 exports.toproute = topReroute;
 exports.frequent = frequentWords;
+exports.gift = findGift;
