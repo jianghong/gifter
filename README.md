@@ -20,3 +20,4 @@ In terminal:
 * ntwitter
 * passport
 * jade
+* wordpos

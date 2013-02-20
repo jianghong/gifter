@@ -9,6 +9,8 @@
     "express": "3.1.0",
     "jade": "0.28.1",
     "ntwitter": "0.5.0",
-    "passport" : "0.1.15"
+    "passport" : "0.1.15",
+    "wordpos" : "0.1.6",
+    "natural": "0.1.19"
   }
 }

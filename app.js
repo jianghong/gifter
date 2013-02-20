@@ -21,6 +21,10 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
+  app.use(function(err, req, res, next) {
+    res.status(500);
+    res.render('error', {error: err});
+  });
 });
 
 app.configure('development', function(){
@@ -28,7 +32,8 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/u/:user/tweets', user.tweets);
+app.get('/u/:user/top', user.frequent);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
